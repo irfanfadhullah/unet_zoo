@@ -1,0 +1,78 @@
+general:
+  project_name: "UNetZooEvaluation"
+
+data:
+  dataset_dir: "./bone_mask" 
+  batch_size: 4
+  num_workers: 4
+  image_size: 512
+
+gpu:
+  use_multi_gpu: false
+  gpu_ids: [0]
+  single_gpu_id: 0
+
+evaluation:
+  output_base_dir: "./evaluation_results"
+  num_inference_samples: 10
+
+models_to_evaluate:
+  - name: unet
+    checkpoint: "./training_runs/unet_YYYYMMDD-HHMMSS/checkpoints/unet_best.pth"
+  - name: attention_unet
+    checkpoint: "./training_runs/attention_unet_YYYYMMDD-HHMMSS/checkpoints/attention_unet_best.pth"
+  - name: transatt_unet
+    checkpoint: "./training_runs/transatt_unet_YYYYMMDD-HHMMSS/checkpoints/transatt_unet_best.pth"
+  - name: raunet
+    checkpoint: "./training_runs/raunet_YYYYMMDD-HHMMSS/checkpoints/raunet_best.pth"
+  - name: da_transformer
+    checkpoint: "./training_runs/da_transformer_YYYYMMDD-HHMMSS/checkpoints/da_transformer_best.pth"
+  - name: unet_transformer
+    checkpoint: "./training_runs/unet_transformer_YYYYMMDD-HHMMSS/checkpoints/unet_transformer_best.pth"
+  - name: uctransnet
+    checkpoint: "./training_runs/uctransnet_YYYYMMDD-HHMMSS/checkpoints/uctransnet_best.pth"
+  - name: multiresunet
+    checkpoint: "./training_runs/multiresunet_YYYYMMDD-HHMMSS/checkpoints/multiresunet_best.pth"
+  - name: nested_unet
+    checkpoint: "./training_runs/nested_unet_YYYYMMDD-HHMMSS/checkpoints/nested_unet_best.pth"
+  - name: missformer
+    checkpoint: "./training_runs/missformer_YYYYMMDD-HHMMSS/checkpoints/missformer_best.pth"
+  - name: vnet
+    checkpoint: "./training_runs/vnet_YYYYMMDD-HHMMSS/checkpoints/vnet_best.pth"
+  - name: u2net
+    checkpoint: "./training_runs/u2net_YYYYMMDD-HHMMSS/checkpoints/u2net_best.pth"
+  - name: u2netp
+    checkpoint: "./training_runs/u2netp_YYYYMMDD-HHMMSS/checkpoints/u2netp_best.pth"
+  - name: swin_unet_v2
+    checkpoint: "./training_runs/swin_unet_v2_YYYYMMDD-HHMMSS/checkpoints/swin_unet_v2_best.pth"
+  - name: resunet  
+    checkpoint: "./training_runs/resunet_YYYYMMDD-HHMMSS/checkpoints/resunet_best.pth"
+
+models:
+  params:
+    unet:
+      depth: 5
+    attention_unet:
+      depth: 4
+    
+    vnet:
+      elu: true
+      nll: false
+    
+    u2net:
+      pass
+    u2netp:
+      pass
+    
+    swin_unet_v2:
+      embed_dim: 96
+      depths: [2, 2, 2, 2]
+      num_heads: [3, 6, 12, 24]
+      window_size: 8
+      mlp_ratio: 4.0
+      drop_rate: 0.0
+      attn_drop_rate: 0.0
+      drop_path_rate: 0.1
+    
+    resunet:
+      filters: [64, 128, 256, 512]

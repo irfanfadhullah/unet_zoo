@@ -1,0 +1,91 @@
+general:
+  project_name: "UNetZooTraining"
+  working_dir: "./training_runs" 
+
+data:
+  dataset_dir: "/data/jupyter_folder/pano_unet_bone/bone_mask"
+  num_workers: 4
+  image_size: 512
+
+training:
+  epochs: 80
+  batch_size: 4
+  learning_rate: 0.0001
+  early_stopping_patience: 20
+  lr_scheduler_patience: 8
+  lr_scheduler_factor: 0.2
+  min_lr: 1e-7
+  num_classes: 1 
+
+gpu:
+  use_multi_gpu: false 
+  gpu_ids: [0, 1, 2, 3, 4, 5, 6, 7] 
+  single_gpu_id: 0 
+
+
+
+models:
+  names:
+    - unet
+    - attention_unet
+    - transatt_unet
+    - raunet
+    - da_transformer
+    - unet_transformer
+    - uctransnet
+    - multiresunet
+    - nested_unet
+    - missformer
+    - vnet         
+    - u2net         
+    - u2netp        
+    - swin_unet_v2  
+    - resunet       
+    - wranet        
+    - egeunet      
+    - unext         
+    - unext_s     
+    - mmunet 
+    - axialunet
+    - gated  
+    - medt 
+    - logo 
+  
+  params:
+    unet:
+      depth: 5 
+    attention_unet:
+      depth: 4 
+    
+    vnet:
+      elu: true
+      nll: false
+    
+    u2net: {}  
+    u2netp: {} 
+    
+    swin_unet_v2:
+      embed_dim: 96
+      depths: [2, 2, 2, 2]
+      num_heads: [3, 6, 12, 24]
+      window_size: 8
+      mlp_ratio: 4.0
+      drop_rate: 0.0
+      attn_drop_rate: 0.0
+      drop_path_rate: 0.1
+    
+    resunet:
+      filters: [64, 128, 256, 512]
+      
+    
+    wranet:
+      feature_channels: 128
+    
+    unext: {}
+    unext_s: {}
+    mmunet: 
+        base_channels: 64
+    axialunet: {}
+    gated: {}
+    medt: {}
+    logo: {}
