@@ -128,16 +128,49 @@ Training is handled via the `scripts/train.py` script, which loads configuration
 
 Here's a list of the UNet variants currently implemented in `UNet Zoo`:
 
-*   `attention_unet`: Attention UNet
-*   `da_transformer_unet`: DA-Transformer UNet
-*   `missformer_unet`: MissFormer UNet
-*   `multiresunet`: MultiResUNet
-*   `nested_unet`: Nested UNet (UNet++)
-*   `raunet`: RAUNet
-*   `transatt_unet`: TransAtt-UNet
-*   `uctransnet`: UCTransNet
-*   `unet`: Original UNet
-*   `unet_transformer`: UNet-Transformer
+#### Core UNet Models
+
+* `unet`: Original UNet
+* `attention_unet`: Attention UNet
+* `nested_unet`: Nested UNet (UNet++)
+* `multiresunet`: MultiResUNet
+* `resunet`: ResUNet
+
+
+#### Transformer-Enhanced UNet Models
+
+* `transatt_unet`: TransAtt-UNet
+* `da_transformer`: DA-Transformer UNet
+* `unet_transformer`: UNet-Transformer
+* `uctransnet`: UCTransNet
+* `missformer`: MissFormer UNet
+* `swin_unet_v2`: Swin UNet V2
+
+
+#### Specialized UNet Variants
+
+* `raunet`: RAUNet
+* `vnet`: Adapted 2D VNet **(Check compatibility closely)**
+* `u2net`: U²-Net
+* `u2netp`: U²-Net-P
+* `wranet`: WRANet **(Originally for image restoration, adapted for segmentation)**
+* `egeunet`: EGEUNet **(Supports deep supervision)**
+
+
+#### UNext Variants
+
+* `unext`: UNext (larger variant)
+* `unext_s`: UNext-S (smaller variant)
+
+
+#### Specialized Medical/Attention Models
+
+* `mmunet`: MMUNet
+* `axialunet`: MedT_Net variant 1
+* `gated`: MedT_Net variant 2
+* `medt`: MedT_Net variant 3 (main MedT)
+* `logo`: MedT_Net variant 4
+
 
 Each model is implemented in its own file under `unet_zoo/models/`. Common layers used across models are in `unet_zoo/models/common_layers.py`.
 
