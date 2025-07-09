@@ -186,11 +186,6 @@ Each model is implemented in its own file under `unet_zoo/models/`. Common layer
 
 We welcome contributions of all kinds! Whether you're reporting a bug, suggesting a new feature, improving existing code, adding a new UNet variant, or enhancing documentation, your help is valuable.
 
-
-## 📄 License
-### Code
-The code here is licensed Apache 2.0. I've taken care to make sure any third party code included or adapted has compatible (permissive) licenses such as MIT, BSD, etc. I've made an effort to avoid any GPL / LGPL conflicts. That said, it is your responsibility to ensure you comply with licenses here and conditions of any dependent licenses. Where applicable, I've linked the sources/references for various components in docstrings. If you think I've missed anything please create an issue.
-
 ## 🙏 Acknowledgements
 
 * Inspired by the excellent `timm` library by Ross Wightman.
