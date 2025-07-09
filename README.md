@@ -42,7 +42,7 @@ Whether you're a researcher exploring new architectures or a practitioner applyi
 1.  **Clone the repository:**
     ```bash
     git clone https://github.com/irfanfadhullah/unet_zoo.git
-    cd my_unet_project
+    cd unet_zoo
     ```
 
 2.  **Install the package in editable mode:**
