@@ -41,10 +41,9 @@ Whether you're a researcher exploring new architectures or a practitioner applyi
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/yourusername/my_unet_project.git
+    git clone https://github.com/irfanfadhullah/unet_zoo.git
     cd my_unet_project
     ```
-    *(Replace `yourusername/my_unet_project.git` with your actual repository URL)*
 
 2.  **Install the package in editable mode:**
     This allows you to make changes to the `unet_zoo` source code directly and have them reflected without re-installation.
