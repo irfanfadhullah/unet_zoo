@@ -7,7 +7,6 @@
 
 ![Python Version](https://img.shields.io/badge/python-3.7+-blue.svg)
 ![PyTorch Version](https://img.shields.io/badge/pytorch-1.8+-orange.svg)
-![License](https://img.shields.io/badge/license-MIT-green.svg)
 <!-- You can add more badges here, e.g., for CI/CD, code style, etc. -->
 
 ## 🌟 Overview
